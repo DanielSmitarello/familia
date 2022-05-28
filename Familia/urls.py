@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.urls import path
 from django.contrib import admin
-from Familia.views import fecha_actual, index
+from Familia.views import index
 from familiares.views import familiares
 
 
@@ -25,6 +25,5 @@ from familiares.views import familiares
 urlpatterns = [
     path('', index, name = 'inicio'),
     path('admin/', admin.site.urls),
-    path("quehoraes/",fecha_actual),
     path("familiares/", familiares, name = "familiares_agregados")
 ]
