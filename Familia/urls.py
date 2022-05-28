@@ -17,15 +17,14 @@ from django.contrib import admin
 from django.urls import path
 from django.urls import path
 from django.contrib import admin
-from Familia.views import saludo, probando_templates, fecha_actual
+from Familia.views import fecha_actual, index
 from familiares.views import familiares
 
 
 
 urlpatterns = [
+    path('', index, name = 'inicio'),
     path('admin/', admin.site.urls),
-    path("saludo/", saludo),
-    path("probando_templates", probando_templates),
     path("quehoraes/",fecha_actual),
     path("familiares/", familiares, name = "familiares_agregados")
 ]

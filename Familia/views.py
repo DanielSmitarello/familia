@@ -10,11 +10,8 @@ def fecha_actual(request):
     return HttpResponse(mensaje)
 
 
-def saludo(request):
-    return HttpResponse("Buenas... es la página de mi familia.")
-
-def probando_templates(request):
+def index(request):
     contex = {
-        "date": datetime.now(),
+        "date": datetime.now(),  # es una prueba para visualizar la fecha en un html
     }
-    return render(request, "template1.html", context = contex)
+    return render(request, 'index.html',context = contex)
